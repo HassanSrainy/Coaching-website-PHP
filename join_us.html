@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="si.css">
+    <link rel="icon" type="image/png" href="images/favicon.jpg" >
+    <title>KnoShare</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <a href="si.html"><img class="logo" src="images/logoblack.png" alt=""></a>
+    <h3  id="join_titre" class="text-center">Join us as Client, or Coach</h3>
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-sm-4 role" >
+          <div id="client">
+            <img src="images/client.jpg" alt="Client" class="rounded-circle">
+            <p>I am a client, hiring for a project, looking for a formation</p></div>
+        </div>
+        <div class="col-12 col-sm-4 role">
+          <div  id="formateur">
+            <img src="images/formateur.jpg" alt="Coach" class="rounded-circle">
+            <p>I’m a coach, looking for work</p></div>
+        </div>
+        
+    </div>
+</div>
+<p style="margin-left:41%; font-weight: bold; margin-top: 5%;">Already have a compte ? <a  href="log_in.php">log in</a></p>
+
+<script>
+    document.getElementById('client').addEventListener('click', function() {
+      window.location.href = 'sign_client.php'
+    });
+
+    document.getElementById('formateur').addEventListener('click', function() {
+      window.location.href = 'sign_coach.php'
+    });
+
+    document.getElementById('freelancer').addEventListener('click', function() {
+      window.location.href = 'sign_freelance.php'
+    });
+</script>
+</body>
+</html>

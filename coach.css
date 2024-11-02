@@ -1,0 +1,382 @@
+.navbar {
+    background-color: rgba(34, 22, 22, 1);
+}
+
+.btn {
+    background-color: rgba(34, 22, 22, 1);
+    color: azure;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 1px solid beige;
+}
+.nav-link
+{
+    color: azure;
+}
+
+.form-control {
+    
+   border-color: rgb(246, 243, 243);
+    background-color: rgba(34, 22, 22, 1);
+    
+}
+
+
+.navbar-toggler {
+    border-color: beige;
+}
+
+
+.navbar-logo {
+    height:40px; 
+    width: auto;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+a:hover
+{
+    color: rgba(221, 124, 55, 1);
+    transform: scale(1.05);
+}
+#but
+{   border: 1px solide rgba(221, 124, 55, 1);
+    color: azure;
+    background-color: rgba(221, 124, 55, 1);
+    margin-left: 20px;
+  
+}
+#search
+{
+    margin-right: 20px;
+}
+#image
+{
+    width: 80%;
+    margin-left: 20%;
+}
+#page1
+{
+    margin-top: 5%;
+}
+#titre1,#titre2
+{
+    color: rgba(221, 124, 55, 1);
+    text-align: center;
+    
+    font-weight: bolder;
+    
+}
+#titre1
+{
+    margin-top: 10%;
+   
+}
+#titre2
+{
+    margin-left: 25%;
+    margin-top: 2%;
+}
+#join
+{
+    margin-top: 5%;
+    font-weight: bold;
+     margin-left: 25%;
+     width: 60%;
+}
+#text_page1
+{
+    margin-left: -5%;
+}
+nav,.row,p
+{
+    font-family: 'Times New Roman', Times, serif;  
+}
+
+#side-tools .container{
+    margin-top: -150px;
+}
+#side-tools {
+    margin-top: 00px;
+}
+#side-tools .row{
+    margin-top: 350px;
+    margin-left: 10px;
+}
+#side-tools .btn{
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+}
+.wave{
+    margin-top: 200px;
+    min-height:230px ;
+    width: 100%;
+}
+#side-tools .cards{
+    margin-top: -150px;
+}
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+#coachs .container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+  margin-bottom:-100px ;
+}
+#contact{
+  background-color: rgba(221, 124, 55, 1);
+}
+
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+  
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center{
+  position: absolute;
+  top: 126%;
+  left: -3%;
+  transform: translate(-50%, -50%);
+}
+.center .stars{
+  height: 150px;
+  width: 500px;
+  text-align: center;
+}
+.stars input{
+  display: none;
+}
+.stars label{
+  float: right;
+  font-size: 30px;
+  color: lightgrey;
+  margin: 0 5px;
+  text-shadow: 1px 1px #bbb;
+}
+.stars label:before{
+  content: '★';
+}
+.stars input:checked ~ label{
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label{
+  color: gold;
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label{
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.stars .result:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 50%;
+  bottom: -30px;
+  font-size: 30px;
+  font-weight: 500;
+  color: gold;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+}
